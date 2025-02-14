@@ -1,0 +1,35 @@
+.tasklist {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  position: relative;
+  top: 50px;
+  left: 10px;
+  overflow-y: scroll;
+  height: 540px;
+  width: 770px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 11%, 1);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 15%, 1);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(202, 68%, 37%, 1);
+}
+.disappear {
+  visibility: hidden;
+}

@@ -1,0 +1,25 @@
+* {
+  border: none;
+  outline: none;
+}
+.additionButton {
+  font-family: 'Inter';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 52px;
+  font-size: 14px;
+  font-weight: 700;
+  color: hsla(0, 0%, 95%, 1);
+  background-color: hsla(202, 68%, 37%, 1);
+  border-radius: 8px;
+  gap: 8px;
+}
+.buttonPlus {
+  width: 16px;
+}
+.additionButton:hover {
+  scale: 1.02;
+  cursor: pointer;
+}

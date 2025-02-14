@@ -1,0 +1,13 @@
+.label {
+  font-family: 'Inter';
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+.blue {
+  color: hsla(202, 68%, 59%, 1);
+}
+.violet {
+  color: hsla(238, 53%, 59%, 1);
+}

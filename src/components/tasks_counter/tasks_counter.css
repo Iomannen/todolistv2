@@ -1,0 +1,8 @@
+.tasksCounter {
+  position: relative;
+  top: 25px;
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
+  width: 745px;
+}

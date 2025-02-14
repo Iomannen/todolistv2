@@ -1,0 +1,101 @@
+input:focus {
+  outline: none;
+}
+.task {
+  background-color: hsla(0, 0%, 15%, 1);
+  width: 740px;
+  min-height: 56px;
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.task_checkbox {
+  position: absolute;
+  appearance: none;
+  top: 16px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+}
+.custom_checkbox {
+  cursor: pointer;
+  position: absolute;
+  width: 17.45px;
+  border-radius: 50%;
+  top: 18px;
+  border: hsla(202, 68%, 59%, 1) solid 2px;
+  height: 17.45px;
+}
+.custom_checkbox:hover {
+  border: hsla(238, 53%, 59%, 1) solid 2px;
+}
+.task_checkbox:checked + .custom_checkbox {
+  background-color: hsla(238, 53%, 59%, 1);
+  width: 20.5px;
+  height: 20.5px;
+  border: none;
+  background-image: url('../task_assets/on.svg');
+  background-position: 50% 55%;
+  background-size: 55%;
+  background-repeat: no-repeat;
+}
+.checkbox_label {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.task_name {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  width: 596px;
+  background-color: hsla(0, 0%, 15%, 1);
+  color: hsla(0, 0%, 95%, 1);
+}
+.task_name:focus {
+  border-bottom: 1px solid hsla(0, 0%, 95%, 1);
+}
+.task_name::placeholder {
+  color: hsla(0, 0%, 95%, 1);
+}
+.completedtask_name {
+  color: hsla(0, 0%, 51%, 1);
+  text-decoration: line-through;
+}
+.completedtask_name::placeholder {
+  color: hsla(0, 0%, 51%, 1);
+  text-decoration: line-through;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+.edit_button {
+  width: 12px;
+  height: 14px;
+  background-image: url('../task_assets/editoff.svg');
+}
+.delete_button {
+  width: 12.48px;
+  height: 14px;
+  background-image: url('../task_assets/delete.svg');
+}
+.edit_button:hover {
+  background-image: url('../task_assets/editon.svg');
+}
+.delete_button:hover {
+  background-image: url('../task_assets/deleteon.svg');
+}
+button:hover {
+  scale: 1.2;
+}

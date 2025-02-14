@@ -1,0 +1,7 @@
+.taskAdditionBlock {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -25px;
+  gap: 8px;
+}

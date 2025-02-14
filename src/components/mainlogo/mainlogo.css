@@ -1,0 +1,6 @@
+.mainlogo {
+  height: 200px;
+  display: flex;
+  justify-self: center;
+  gap: 10px;
+}

@@ -1,0 +1,19 @@
+.tasksCounterModule {
+  font-family: 'Inter';
+  font-weight: 700;
+  display: flex;
+  gap: 8px;
+}
+.tasksText {
+  color: hsla(202, 68%, 59%, 1);
+  font-size: 14px;
+}
+.tasksCount {
+  display: flex;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: hsla(0, 0%, 85%, 1);
+  background-color: hsla(0, 0%, 21%, 1);
+  font-size: 12px;
+}

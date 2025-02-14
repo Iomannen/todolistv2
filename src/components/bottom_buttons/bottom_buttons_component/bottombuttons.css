@@ -1,0 +1,33 @@
+* {
+  border: none;
+  outline: none;
+}
+.bottombutton {
+  font-family: 'Inter';
+  display: flex;
+  align-items: center;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 16px;
+  color: hsla(0, 0%, 95%, 1);
+  background-color: hsla(202, 68%, 37%, 1);
+  mix-blend-mode: color-dodge;
+  box-shadow: 0 4px 4px 0 hsla(0, 0%, 1%, 0.25);
+}
+.bottombutton:hover {
+  scale: 1.02;
+  cursor: pointer;
+}
+.active {
+  background-color: hsla(202, 68%, 37%, 1);
+  mix-blend-mode: normal;
+}
+.deletebutton:hover {
+  background-color: hsla(202, 68%, 37%, 1);
+  mix-blend-mode: normal;
+}
+.disappear {
+  visibility: hidden;
+}
