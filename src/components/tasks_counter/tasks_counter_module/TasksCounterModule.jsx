@@ -17,7 +17,7 @@ class TasksCounterModule extends React.Component {
 
 TasksCounterModule.propTypes = {
   content: PropTypes.string.isRequired,
-  counter: PropTypes.number.isRequired,
+  counter: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 TasksCounterModule.defaultProps = {
   content: 'Counter',
