@@ -115,11 +115,12 @@ class NewFile extends React.Component {
           onBlur={() => {
             const input = document.getElementById(`task_name${task.name}`);
             console.log(input.value);
+            console.log(this.tasks);
             if (input.value === '') {
               input.setAttribute('disabled', 'disabled');
             }
             this.tasks.forEach((elem) => {
-              if (elem.name === task.name && input.value === null) {
+              if (elem.name === task.name && input.value !== '') {
                 elem.name = input.value;
               }
             });
@@ -133,10 +134,10 @@ class NewFile extends React.Component {
                   const newKey = localStorage.getItem(key);
                   localStorage.removeItem(key);
                   localStorage.setItem(JSON.stringify(localStorageTask), newKey);
+                  this.setState({ stateChange: this.state.stateChange + 1 });
                 }
-              } // проблема в том что три раза эта задача снизу обрабатывается короче пятикратно переваренный кал
+              }
             });
-            this.setState({ stateChange: this.state.stateChange + 1 });
           }}
         ></input>
         <button
@@ -191,6 +192,11 @@ class NewFile extends React.Component {
   };
   handleEnter = (event) => {
     const input = document.querySelector('.input');
+    const filter = this.tasks.filter((task) => task.name === input.value);
+    if (filter.length !== 0) {
+      alert('Имена задач не должны быть одинаковыми. Пожалуйста измените имя задачи, если хотите её добавить.');
+      return;
+    }
     if (input.value !== '' && event.key === 'Enter') {
       const obj = {
         name: input.value,
@@ -206,6 +212,11 @@ class NewFile extends React.Component {
   };
   handleClick = () => {
     const input = document.querySelector('.input');
+    const filter = this.tasks.filter((task) => task.name === input.value);
+    if (filter.length !== 0) {
+      alert('Имена задач не должны быть одинаковыми. Пожалуйста измените имя задачи, если хотите её добавить.');
+      return;
+    }
     if (input.value !== '') {
       const obj = {
         name: input.value,
