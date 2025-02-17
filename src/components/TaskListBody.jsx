@@ -114,7 +114,7 @@ class NewFile extends React.Component {
           onBlur={() => {
             const input = document.getElementById(`task_name${task.name}`);
             const uniqCheck = this.tasks.filter((task) => task.name === input.value);
-            if (uniqCheck.length > 0) {
+            if (uniqCheck.length > 0 && tasks.length > 1) {
               alert('Имя задачи должно быть уникальным. Пожалуйста измените название задачи.');
               return;
             }
