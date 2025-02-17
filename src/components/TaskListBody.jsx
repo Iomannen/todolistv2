@@ -147,6 +147,7 @@ class NewFile extends React.Component {
           onClick={() => {
             const input = document.getElementById(`task_name${task.name}`);
             input.removeAttribute('disabled', 'disabled');
+            input.value = input.placeholder;
             input.focus();
           }}
         ></button>
