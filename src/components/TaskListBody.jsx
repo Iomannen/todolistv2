@@ -109,13 +109,15 @@ class NewFile extends React.Component {
             const input = document.getElementById(`task_name${task.name}`);
             if (event.key === 'Enter' && input.value !== input.placeholder) {
               input.setAttribute('disabled', 'disabled');
-              input.placeholder = input.value;
             }
           }}
           onBlur={() => {
             const input = document.getElementById(`task_name${task.name}`);
-            console.log(input.value);
-            console.log(this.tasks);
+            const uniqCheck = this.tasks.filter((task) => task.name === input.value);
+            if (uniqCheck.length > 0) {
+              alert('Имя задачи должно быть уникальным. Пожалуйста измените название задачи.');
+              return;
+            }
             if (input.value === '') {
               input.setAttribute('disabled', 'disabled');
             }
